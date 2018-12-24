@@ -1,0 +1,18 @@
+版本：18.11
+官方文档：https://arm-software.github.io/ComputeLibrary/v18.11/index.xhtml
+本地编译环境：
+Mac 10.13.6
+Python 2.7.10（注意，必须是2.x版本，3.x版本会编不过）
+scons 3.0.1
+Android ndk r17c
+
+1、配置scons编译环境：
+  下载scons源码，解压后，在该目录下执行python setup.py install
+  
+2、检查android toolchains是否ok：
+  1）是否有arm-linux-androideabi-clang++工具（32位）oraarch64-linux-android-clang++（64位）；
+  2）否则，编译toolchains：
+  $NDK/build/tools/make_standalone_toolchain.py --arch arm64 --install-dir $MY_TOOLCHAINS/aarch64-linux-android-ndk-r17c --stl libc++ --api 21
+
+3、在arm compute library目录下，根据需求，执行编译命令：
+  OPENGL：scons Werror=1 -j8 debug=0 asserts=1 neon=0 opencl=0 gles_compute=1 embed_kernels=1 os=android
