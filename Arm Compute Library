@@ -15,4 +15,4 @@ Android ndk r17c
   $NDK/build/tools/make_standalone_toolchain.py --arch arm64 --install-dir $MY_TOOLCHAINS/aarch64-linux-android-ndk-r17c --stl libc++ --api 21
 
 3、在arm compute library目录下，根据需求，执行编译命令：
-  OPENGL：scons Werror=1 -j8 debug=0 asserts=1 neon=0 opencl=0 gles_compute=1 embed_kernels=1 os=android
+  OPENGL：scons Werror=1 -j8 debug=0 asserts=1 neon=0 opencl=0 gles_compute=1 embed_kernels=1 os=android arch=armv7a set_soname=1
