@@ -15,5 +15,9 @@ Android ndk r17c
   $NDK/build/tools/make_standalone_toolchain.py --arch arm64 --install-dir $MY_TOOLCHAINS/aarch64-linux-android-ndk-r17c --stl libc++ --api 21
 
 3、在arm compute library目录下，根据需求，执行编译命令：
-  neon、opencl、gles_compute3个全部打开：
+  e.g.neon、opencl、gles_compute3个全部打开：
   CXX=clang++ CC=clang scons Werror=1 -j8 debug=0 asserts=1 neon=1 opencl=1 gles_compute=1 embed_kernels=1 os=android arch=armv7a set_soname=1 cppthreads=1
+  编译完成后的产物在arm compute library目录下的build/下面，Android上可以用静态库或者动态库的方式引入，我这里由于用.so动态库引入的时候报一个奇怪的libarm_compute.so.13找不到的错误，是用静态库的方式引入的。
+  
+  
+  
