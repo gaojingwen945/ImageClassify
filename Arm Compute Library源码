@@ -42,7 +42,7 @@
 │   │   │   └── NEON --> NEON specific operations
 │   │   ├── detail
 │   │   │   └── Collection of internal utilities.
-│   │   ├── frontend
+│   │   ├── frontend --> 提供给外部的创建图、添加各层等接口。
 │   │   │   └── Code related to the stream frontend interface.
 │   │   ├── mutators
 │   │   │   └── Used to modify / optimise the Graph intermediate representation(Operator fusion, in place operations, etc.)
@@ -150,3 +150,6 @@
 │       └── NEON --> NEON validation tests
 └── utils --> Boiler plate code used by examples
     └── Various utilities to print types, load / store assets, etc.
+
+以下是一个简单的流程图，描述向一个图中添加一个layer的过程：
+![Alt text](http://www.izhangbo.cn/wp-content/themes/minty/img/logo.png "流程图")
