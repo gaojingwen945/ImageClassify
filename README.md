@@ -1,3 +1,3 @@
 备忘们
 
-1、arm compte library接入
+1、Arm Compute Library编译、接入及源码阅读
