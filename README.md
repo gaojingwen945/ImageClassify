@@ -1,7 +1,7 @@
 持续更新中：
 1. 模型选择：mobilenet 224*224 1.0
 2. 模型迁移训练：tensorflow
-3. 转换为移动端可执行的模型
+3. 转换为移动端可执行的模型文件：.tflite格式 or 其他格式
 4. 移动端前馈网络实现方案选择：
  * tensorflowlite
  * snpe
