@@ -1,9 +1,13 @@
+之前做的一个图像分类项目，中间踩过很多坑，也学了很多东西，在这里写个简单的memo，也供后来人参考。
+
 持续更新中：
-1. 模型选择：mobilenet 224*224 1.0
-2. 模型迁移训练：tensorflow
-3. 转换为移动端可执行的模型文件：.tflite格式 or 其他格式
-4. 移动端前馈网络实现方案选择：
- * tensorflowlite
- * snpe
- * Arm Compute Library编译、接入及源码阅读
- * 自己用shader实现前馈网络
+
+1. 需求：实现移动端本地的图像分类，准确率、性能在可接受的范围内，不依赖服务端交互
+2. 模型选择：mobilenet_224*224_1.0的非量化/float版本
+3. 模型迁移训练：tensorflow
+4. 转换为移动端可执行的模型文件：.tflite格式 or 其他格式
+5. 移动端前馈网络实现方案选择与对比：
+   - tensorflowlite
+   - snpe
+   - Arm Compute Library编译、接入及源码阅读
+   - 自己用shader实现前馈网络
